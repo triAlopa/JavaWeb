@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            background: gray;
+            width: 500px;
+            height: 600px;
+            /* 设定主轴 方向
+             row 从左向右排列
+             row-reverse 从右向左排列
+             column 从上到下排列
+             column-reverse 从下到上排列
+            */
+            flex-direction: row;
+            /* 主轴对齐方式 start 从头排列 
+            center 居中排列 
+            end 从尾排列
+            space-between 两端对齐，项目之间的间隔相等
+            space-around 每个项目两侧的间隔相等
+            space-evenly 每个项目之间的间隔相等
+            */
+            justify-content: space-evenly;
+
+        }
+        #item1{
+            background: orange;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="item1"></div>
+        <div id="item1"></div>
+    
+    </div>
+</body>
+</html>

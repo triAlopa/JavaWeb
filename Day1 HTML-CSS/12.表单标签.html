@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+
+<body>
+      <!-- 
+      表单标签
+      action: 提交地址 
+        method: 提交方式 get/post
+        get : 通过url传递参数 ?key=value&key=value(默认)
+         1.传递长度有限制
+         2.不适合传递敏感信息
+        post : 通过请求体传递参数
+         1.没有长度限制
+         2.适合传递敏感信息
+
+         如果要传递数据，必须给表单项标签绑定name属性
+         其实就是key
+         表单项标签的value属性值输入的内容就是value
+ -->
+
+    <form action="/save" method="GET">
+        名字 <input type="text" placeholder="请输入用户名" name="username">
+        年龄 <input type="text" placeholder="请输入年龄" name="age">
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>
