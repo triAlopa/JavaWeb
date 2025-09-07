@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        盒子模型
+    </title>
+    <style>
+        div{
+            height: 300px;
+            width: 500px;
+            background-color: aqua;
+
+            box-sizing: border-box;
+            /* 设置内边距 */
+            padding: 50px 20px;
+            /* 设置边框 */
+            border: 10px solid rgb(8, 96, 128);
+            /* 设置外边距 */
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+   <!--  div会默认占一行，可以设置修改宽高，本身宽高跟随父标签的宽高，但是div的宽高不会跟随内容，内容会自动填充div
+     宽度随父标签，高度随内容
+    div的宽高会跟随内容，但是div的内容不会自动填充div
+    span只有内容填充宽高，不可以修改宽高，span不会占一行 -->
+    <div>
+        我是div 我是div 我是div 我是div 我是div 我是div 我是div 我是div 我是div 我是div 我是div 我是div
+    </div> 
+    <!-- <div>
+        我是div
+    </div>
+    <span>
+        我是span
+    </span>
+    <span>
+        我是span
+    </span> -->
+</body>
+</html>
