@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-常见的事件</title>
+</head>
+
+<body>
+    <form action="">
+        <div style="text-align: center; margin: 20px auto;">
+            <input type="text" name="username" id="username" placeholder="请输入内容">
+            <input type="text" name="age" id="age" placeholder="请输入年龄">
+            <input type="submit" value="提交" id="btn1">
+            <input type="button" action="submit" value="点击" id="btn2">
+        </div>
+    </form>
+
+    <table border="1" style="width: 300px; text-align: center; margin: 20px auto;">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>
+                张三
+            </td>
+            <td>
+                18
+            </td>
+        </tr>
+        <tr id="last">
+            <td>
+                李四
+            </td>
+            <td>
+                19
+            </td>
+        </tr>
+    </table>
+    <script>
+        document.querySelector('#btn2').addEventListener('click', function () {
+            alert('点击了')
+        });
+
+        document.querySelector('#last').addEventListener('mouseenter', function () {
+            console.log('鼠标移入了')
+        });
+        document.querySelector('#last').addEventListener('mouseleave', function () {
+            console.log('鼠标离开了')
+        });
+        document.querySelector('#age').addEventListener('input', function () {
+            console.log('输入了内容')
+        });
+        document.querySelector('form').addEventListener('submit', function () {
+            console.log('提交了内容-----------------')
+        });
+        document.querySelector('#username').addEventListener('focus', function () {
+            console.log('获取焦点')
+        });
+        document.querySelector('#username').addEventListener('blur', function () {
+            console.log('失去焦点')
+        });
+        document.querySelector('#username').addEventListener('keyup', function () {
+            console.log('键盘抬起了')
+        });
+        document.querySelector('#username').addEventListener('keydown', function () {
+            console.log('键盘按下了')
+        });
+    </script>
+
+</body>
+
+</html>
