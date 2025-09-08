@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="bt1">发送请求</button>
+    <button class="bt2">get请求</button>
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js">
+       
+    </script>
+    <script>
+       document.querySelector('.bt1').onclick = function () {
+             axios.get('https://mock.apifox.cn/m1/3083103-0-default/emps/list').then((result) => {
+            console.log(result.data);
+        }).catch((err) => {
+            console.log(err);
+        });
+
+    }
+    document.querySelector('.bt2').onclick = function () {
+        axios.get('https://mock.apifox.cn/m1/3083103-0-default/emps/update').then((result) => {
+            console.log(result.data);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
+
+       
+        //  document.querySelector('.bt1').addEventListener('onClick', function () {
+        //     alert('发送请求');
+        //     axios({
+        //         url: 'https://mock.apifox.cn/m1/3083103-0-default/emps/list',
+        //         method: 'get'
+        //     }).then((result) => {
+        //         console.log(result);
+        //     }).catch((err) => {
+        //         console.log(err);
+        //     });
+        // })
+    </script>
+</body>
+
+</html>
