@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-自定义对象</title>
+</head>
+<body>
+    
+<script>
+    //创建对象的方式
+    //对象变量 = {属性:值,属性:值,属性:值}
+    //对象方法  名称 : function(){}
+    // let user={
+    //     name:'tom',
+    //     age:18,
+    //     gender:'男',
+    //     sing: function(){
+    //         alert(this.name+'正在唱歌');
+    //     }
+    // };
+
+    // let user={
+    //     name:'tom',
+    //     age:18,
+    //     gender:'男',
+    //     sing(){
+    //         alert(this.name+'正在唱歌');
+    //     }
+    // };
+    //对象的方法不推荐使用箭头函数，this只会指向window(上一级 不推荐)
+    // let user={
+    //     name:'tom',
+    //     age:18,
+    //     gender:'男',
+    //     sing:()=>{
+    //         alert(this.name+'正在唱歌');// this 指向window  正在唱歌
+    //     }
+    // };
+
+
+    // alert(user.name);
+    // user.sing();
+
+    // js 里标记对象的方式 json
+    // let Person={
+    //     name:"tom",
+    //     age:18,
+    //     sing:function(){
+    //         alert(this.name+'正在唱歌');
+    //     }
+    // };
+    // alert(Person);//[object Object]
+     alert(JSON.stringify(Person))// {"name":"tom","age":18},不可以解析方法 sing
+     
+    // //json 转对象  JSON.parse() 字符串要用单引号包裹起来
+    //  alert(JSON.parse('{"name":"tom","age":18}').name);    
+</script>
+
+
+
+</body>
+</html>
